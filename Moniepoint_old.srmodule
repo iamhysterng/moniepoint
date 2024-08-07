@@ -1,0 +1,14 @@
+#!name=mp 旧版本
+#!desc=旧版本不提示升级
+#!category=Moniepoint
+
+[MITM]
+hostname = %APPEND% *.mab.console.teamapt.com, *.moniepoint.com
+
+[Script]
+
+# version
+version_1=type=http-request,pattern=^https:\/\/.*\.mab\.console\.teamapt\.com\/.*$, script-path=https://raw.githubusercontent.com/iamhysterng/moniepoint/main/Javascript/client_version.js, requires-body=1
+
+# version
+version_2=type=http-request,pattern=^https:\/\/.*\.moniepoint\.com\/.*$, script-path=https://raw.githubusercontent.com/iamhysterng/moniepoint/main/Javascript/client_version.js, requires-body=1
